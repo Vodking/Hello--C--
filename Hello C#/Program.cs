@@ -103,6 +103,22 @@ namespace Hello_C_
             //ffffff[0][3] = 5;
 
             //StringBuilder sb = new StringBuilder();
+            var fig = new Figure();
+            var fig2 = new Figure(12.0, 3.14);
+            fig2.X = 1;
+            fig2.Y = 1;
+            Console.WriteLine(fig2.X);
+            Console.WriteLine(fig2.Y);
+            fig2.Init(2.5, 60.3245);
+            var emp = new Employee();
+            var emp2 = new Employee("Уборщик", "Уборное");
+            var aaaa = 5;
+            var bbbb = 5;
+            Employee.Increment(ref aaaa);
+            Console.WriteLine(aaaa);
+            int sum;
+            Employee.Sum(in aaaa, in bbbb, out sum);
+            int aaaaa = Convert.ToInt32(Console.ReadLine());
         }
     }
 }
