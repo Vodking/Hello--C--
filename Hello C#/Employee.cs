@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharps
+namespace Hello_C_
 {
     public class Employee
     {
