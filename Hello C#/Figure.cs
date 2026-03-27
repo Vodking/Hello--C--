@@ -1,5 +1,5 @@
 ﻿
-namespace CSharps
+namespace Hello_C_
 {
     public struct Figure
     {
