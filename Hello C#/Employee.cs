@@ -4,10 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hello_C_
+namespace C__strart
 {
-    public class Employee
+    public abstract class Employee : Human
     {
+        public decimal Salary { get; set; }
+        public Employee(string name, int age, decimal salary) : base(name, age)
+        {
+            Salary = salary;
+        }
+
+        public override void Info() // new - затенение метода родителя, override - перегрузка
+        {
+            base.Info();
+            Console.WriteLine("Hello from Eployee");
+        }
+        //Мы не знаем, живой он или мёртвый
+        // - мяу
+        // Я не знаю что такое интерфейс, только интерфейс МЭ системы
+
+        /*
         private string _position;
         public static decimal salary;
         public const string COMPANY_NAME = "Вадж";
@@ -22,12 +38,10 @@ namespace Hello_C_
 
         public Employee() { }
 
-        static Employee() 
+        static Employee()
         {
 
         }
-
-        public static void Asd(Figure figure) { }
 
         public static void Increment(ref int a) // ref - ссылка, универсальная, in - входящая - переменная передаётся(ТОЛЬКО ЧТЕНИЕ), out - выходящая - переменная меняется там куда передали(ТОЛЬКО РЕДАКТИРОВАНИЕ)
         {
@@ -42,5 +56,8 @@ namespace Hello_C_
         {
 
         }
+        */
+
+
     }
 }

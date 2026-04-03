@@ -1,7 +1,12 @@
-﻿
-namespace Hello_C_
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace C__strart
 {
-    public struct Figure
+    internal class Figure
     {
         private double _x, _y;
 
@@ -16,6 +21,12 @@ namespace Hello_C_
         {
             _x = x;
             _y = y;
+        }
+
+        public Figure()
+        {
+            _x = 0;
+            _y = 0;
         }
 
         public void Init(double x, double y)
