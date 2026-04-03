@@ -1,20 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Text;
-
-namespace Hello_C_
+﻿namespace C__strart
 {
     internal class Program
     {
-        enum DaysOfWeek : sbyte
-        {
-            Monday = 10,
-            Tuesday, //11
-            Wednesday, //12
-            Thirsday, //13
-            Friday = 22,
-            Saturday,//23
-            Sunday//24
-        }
         static void Main(string[] args)
         {
             //string hello = "Hello, World";
@@ -47,11 +34,11 @@ namespace Hello_C_
             string
             */
 
-            float a = 3.4f;
-            double b = 3.4d;
-            decimal c = 3.4m;
+            //float a = 3.4f;
+            //double b = 3.4d;
+            //decimal c = 3.4m;
             //тип название = значение
-            var f = 4; //int
+            //var f = 4; //int
 
             //Dictionary<int, List<string>> dic = new Dictionary<int, List<string>>();
             //=
@@ -103,22 +90,35 @@ namespace Hello_C_
             //ffffff[0][3] = 5;
 
             //StringBuilder sb = new StringBuilder();
-            var fig = new Figure();
-            var fig2 = new Figure(12.0, 3.14);
-            fig2.X = 1;
-            fig2.Y = 1;
-            Console.WriteLine(fig2.X);
-            Console.WriteLine(fig2.Y);
-            fig2.Init(2.5, 60.3245);
-            var emp = new Employee();
-            var emp2 = new Employee("Уборщик", "Уборное");
-            var aaaa = 5;
-            var bbbb = 5;
-            Employee.Increment(ref aaaa);
-            Console.WriteLine(aaaa);
-            int sum;
-            Employee.Sum(in aaaa, in bbbb, out sum);
-            int aaaaa = Convert.ToInt32(Console.ReadLine());
+            //var fig = new Figure();
+            //var fig2 = new Figure(12.0, 3.14);
+            //fig2.X = 1;
+            //fig2.Y = 1;
+            //Console.WriteLine(fig2.X);
+            //Console.WriteLine(fig2.Y);
+            //fig2.Init(2.5, 60.3245);
+            //var emp = new Employee();
+            //var emp2 = new Employee("Уборщик", "Уборное");
+            //var aaaa = 5;
+            //var bbbb = 5;
+            //Employee.Increment(ref aaaa);
+            //Console.WriteLine(aaaa);
+            //int sum;
+            //Employee.Sum(in aaaa, in bbbb, out sum);
+            //int aaaaa = Convert.ToInt32(Console.ReadLine());
+
+
+
+
+
+            object obj = new Employee("пупупу", 21, Convert.ToDecimal(123.2));//динамический полиморфизм
+            //(obj as Human).Name = "Test"; // as - приведение типов
+
+            if(obj is Human) // is - проверка на совместимость типов
+            {
+                (obj as Human).Name = "Test"; // приведение типа
+                (obj as Employee).Info();
+            }
         }
     }
 }
